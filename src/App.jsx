@@ -58,27 +58,27 @@ class App extends React.Component {
     }
 
     /* Change below to render students*/
-    if (this.state.buttonClicked === "students") {
+    if (this.state.buttonClicked === "student") {
       tabChoice = (
         <List
           placeholder="Add Students..."
           currList={this.state.students}
           addFunction={this.addStudent}
-          title="Student Roster"
+          title="Student"
         />
       );
     }
     /* Uncomment lines below to render grades*/
-    if (this.state.buttonClicked === "grades") {
-      tabChoice = (
-        <Table
-          tableNames={this.state.assignments}
-          rows={this.state.students}
-          addFunction={this.addGrade}
-          data={this.state.grades}
-        />
-      );
-    }
+    // if (this.state.buttonClicked === "grades") {
+    //   tabChoice = (
+    //     <Table
+    //       tableNames={this.state.assignments}
+    //       rows={this.state.students}
+    //       addFunction={this.addGrade}
+    //       data={this.state.grades}
+    //     />
+    //   );
+    // }
     return (
       <div>
         <div className="Box Box--spacious f4">
